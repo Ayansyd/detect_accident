@@ -1,0 +1,23 @@
+# TO RUN THE SERVE 
+--> node server.js
+
+# TO CHECK IF GPS IS WORKING
+--> cgps / gpspipe -r /dev/ttyACM0
+
+
+# TO RELAOD THE GPS 
+--> sudo systemctl restart gpsd
+
+# IF STILL NOT WORKING THEN RESTART THE DEAMON 
+--> sudo systemctl daemon-reexec
+-->sudo systemctl daemon-reload
+
+# TO RUN THE PYTHOH SCRIPT 
+--> sudo python3 lifeserverffmpeg.py
+
+# ALSO YOU NEED TO STORE THE SSH KEY FOR YOU DESTINATION IN YOUR SERVER SO IT CAN SEND THE DATA OVER SCP
+-->ssh-keygen -t rsa -b 2048
+-->ssh-copy-id <user>@192.168.......
+
+# VERIFY BY ACCESSING THERE PC WITHOUT PASSWORD NOW 
+--> ssh <user>@192.168........
